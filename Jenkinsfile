@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'g++ temp.cpp -o temp'
-                 build job: 'PES1UG20CS273-1', wait: false
+                 build job: 'PES1UG20CS181-1', wait: false
                  echo 'Build by CS273 successful'
             }
         }
@@ -13,14 +13,14 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'cat temp.cpp'
-                echo 'Test by CS273 successful'
+                echo 'Test by PES1UG20CS181 successful'
             }
         }
 
         stage('Deploy') {
             steps {
                
-                echo 'Deploy by CS273 successful'
+                echo 'Deploy by PES1UG20CS181 successful'
             }
         }
     }
@@ -28,7 +28,7 @@ pipeline {
     post {
         failure {
             
-                echo 'Pipeline Failed'
+                echo 'Pipeline by PES1UG20CS181 Failed'
           
         }
     }
